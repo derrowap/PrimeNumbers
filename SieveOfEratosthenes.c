@@ -8,7 +8,7 @@ void sieveOfEratosthenes(int max) {
 	int i, j;
 	for(i = 2; i < sqrt(max); i++) {
 		if(!primes[i]) {
-			for(j = i*i; j <= max; j+=i) {
+			for(j = i*i; j < max; j+=i) {
 				primes[j] = true;
 			}
 		}
